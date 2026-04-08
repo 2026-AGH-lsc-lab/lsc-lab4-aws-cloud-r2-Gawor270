@@ -1,0 +1,33 @@
+AWS Cloud Lab - Assignment 1 Endpoint Verification
+Date: 2026-04-07
+Region: us-east-1
+
+Endpoint inventory used in the run (from loadtest/endpoints.sh):
+- LAMBDA_ZIP_URL=https://3xgxgzqcfimulykttt2xldiafy0zsvmx.lambda-url.us-east-1.on.aws
+- LAMBDA_CONTAINER_URL=https://gaqyxl4puzbfld3f7vjzwxhaly0cgiqi.lambda-url.us-east-1.on.aws
+- FARGATE_URL=http://lsc-knn-alb-1504661277.us-east-1.elb.amazonaws.com
+- EC2_URL=http://100.52.199.4:8080
+
+Verification evidence available after cleanup:
+- Scenario A/B/C result files show 100.00% success rate (HTTP 200) for all four targets.
+- This confirms all four deployed endpoints were functional during measurements.
+
+Important note:
+- The exact terminal transcript with side-by-side JSON bodies and matching `results` arrays was not preserved before cleanup.
+- Raw latency artifacts are preserved in results/scenario-*.txt and CloudWatch report exports.
+
+Relevant raw files:
+- results/scenario-a-zip.txt
+- results/scenario-a-container.txt
+- results/scenario-b-lambda-zip-c5.txt
+- results/scenario-b-lambda-zip-c10.txt
+- results/scenario-b-lambda-container-c5.txt
+- results/scenario-b-lambda-container-c10.txt
+- results/scenario-b-fargate-c10.txt
+- results/scenario-b-fargate-c50.txt
+- results/scenario-b-ec2-c10.txt
+- results/scenario-b-ec2-c50.txt
+- results/scenario-c-lambda-zip.txt
+- results/scenario-c-lambda-container.txt
+- results/scenario-c-fargate.txt
+- results/scenario-c-ec2.txt

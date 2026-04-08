@@ -1,0 +1,45 @@
+=== fargate | concurrency=10 | 500 requests ===
+Summary:
+  Success rate:	100.00%
+  Total:	41.2771 sec
+  Slowest:	1.3045 sec
+  Fastest:	0.4152 sec
+  Average:	0.8222 sec
+  Requests/sec:	12.1132
+
+  Total data:	152.77 KiB
+  Size/request:	312 B
+  Size/sec:	3.70 KiB
+
+Response time histogram:
+  0.415 sec [1]   |
+  0.504 sec [8]   |■
+  0.593 sec [17]  |■■■
+  0.682 sec [31]  |■■■■■■
+  0.771 sec [93]  |■■■■■■■■■■■■■■■■■■■■
+  0.860 sec [146] |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.949 sec [110] |■■■■■■■■■■■■■■■■■■■■■■■■
+  1.038 sec [65]  |■■■■■■■■■■■■■■
+  1.127 sec [21]  |■■■■
+  1.216 sec [5]   |■
+  1.304 sec [3]   |
+
+Response time distribution:
+  10.00% in 0.6187 sec
+  25.00% in 0.7093 sec
+  50.00% in 0.8063 sec
+  75.00% in 0.9057 sec
+  90.00% in 0.9992 sec
+  95.00% in 1.0822 sec
+  99.00% in 1.1847 sec
+  99.90% in 1.3045 sec
+  99.99% in 1.3045 sec
+
+
+Details (average, fastest, slowest):
+  DNS+dialup:	0.1398 sec, 0.1304 sec, 0.1410 sec
+  DNS-lookup:	0.0000 sec, 0.0000 sec, 0.0001 sec
+
+Status code distribution:
+  [200] 500 responses
+
